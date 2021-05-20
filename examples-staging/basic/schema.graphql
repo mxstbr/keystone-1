@@ -209,8 +209,8 @@ input UserUpdateInput {
   password: String
   isAdmin: Boolean
   roles: String
-  phoneNumbers: PhoneNumberRelateToManyInput
-  posts: PostRelateToManyInput
+  phoneNumbers: PhoneNumberRelateToManyForUpdateInput
+  posts: PostRelateToManyForUpdateInput
 }
 
 input ImageFieldInput {
@@ -255,8 +255,8 @@ input UserCreateInput {
   password: String
   isAdmin: Boolean
   roles: String
-  phoneNumbers: PhoneNumberRelateToManyInput
-  posts: PostRelateToManyInput
+  phoneNumbers: PhoneNumberRelateToManyForCreateInput
+  posts: PostRelateToManyForCreateInput
 }
 
 input UsersCreateInput {
@@ -319,7 +319,7 @@ input PhoneNumberOrderByInput {
 }
 
 input PhoneNumberUpdateInput {
-  user: UserRelateToOneInput
+  user: UserRelateToOneForUpdateInput
   type: String
   value: String
 }
@@ -337,7 +337,7 @@ input PhoneNumbersUpdateInput {
 }
 
 input PhoneNumberCreateInput {
-  user: UserRelateToOneInput
+  user: UserRelateToOneForCreateInput
   type: String
   value: String
 }
@@ -422,7 +422,7 @@ input PostUpdateInput {
   status: String
   content: JSON
   publishDate: String
-  author: UserRelateToOneInput
+  author: UserRelateToOneForUpdateInput
 }
 
 input PostsUpdateInput {
@@ -435,7 +435,7 @@ input PostCreateInput {
   status: String
   content: JSON
   publishDate: String
-  author: UserRelateToOneInput
+  author: UserRelateToOneForCreateInput
 }
 
 input PostsCreateInput {

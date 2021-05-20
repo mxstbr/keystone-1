@@ -132,7 +132,7 @@ input UserUpdateInput {
   name: String
   email: String
   password: String
-  posts: PostRelateToManyInput
+  posts: PostRelateToManyForUpdateInput
 }
 
 input PostRelateToManyInput {
@@ -151,7 +151,7 @@ input UserCreateInput {
   name: String
   email: String
   password: String
-  posts: PostRelateToManyInput
+  posts: PostRelateToManyForCreateInput
 }
 
 input UsersCreateInput {
@@ -283,8 +283,8 @@ input PostUpdateInput {
   status: String
   content: JSON
   publishDate: String
-  author: UserRelateToOneInput
-  tags: TagRelateToManyInput
+  author: UserRelateToOneForUpdateInput
+  tags: TagRelateToManyForUpdateInput
 }
 
 input UserRelateToOneInput {
@@ -311,8 +311,8 @@ input PostCreateInput {
   status: String
   content: JSON
   publishDate: String
-  author: UserRelateToOneInput
-  tags: TagRelateToManyInput
+  author: UserRelateToOneForCreateInput
+  tags: TagRelateToManyForCreateInput
 }
 
 input PostsCreateInput {
@@ -413,7 +413,7 @@ input TagOrderByInput {
 
 input TagUpdateInput {
   name: String
-  posts: PostRelateToManyInput
+  posts: PostRelateToManyForUpdateInput
 }
 
 input TagsUpdateInput {
@@ -423,7 +423,7 @@ input TagsUpdateInput {
 
 input TagCreateInput {
   name: String
-  posts: PostRelateToManyInput
+  posts: PostRelateToManyForCreateInput
 }
 
 input TagsCreateInput {

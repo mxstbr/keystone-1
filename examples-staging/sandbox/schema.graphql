@@ -94,7 +94,7 @@ enum OrderDirection {
 input TodoUpdateInput {
   label: String
   isComplete: Boolean
-  assignedTo: UserRelateToOneInput
+  assignedTo: UserRelateToOneForUpdateInput
   finishBy: String
 }
 
@@ -113,7 +113,7 @@ input TodosUpdateInput {
 input TodoCreateInput {
   label: String
   isComplete: Boolean
-  assignedTo: UserRelateToOneInput
+  assignedTo: UserRelateToOneForCreateInput
   finishBy: String
 }
 
@@ -249,7 +249,7 @@ input UserUpdateInput {
   name: String
   email: String
   password: String
-  tasks: TodoRelateToManyInput
+  tasks: TodoRelateToManyForUpdateInput
 }
 
 input TodoRelateToManyInput {
@@ -268,7 +268,7 @@ input UserCreateInput {
   name: String
   email: String
   password: String
-  tasks: TodoRelateToManyInput
+  tasks: TodoRelateToManyForCreateInput
 }
 
 input UsersCreateInput {

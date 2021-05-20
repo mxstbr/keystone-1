@@ -65,7 +65,7 @@ input TodoUpdateInput {
   label: String
   isComplete: Boolean
   isPrivate: Boolean
-  assignedTo: PersonRelateToOneInput
+  assignedTo: PersonRelateToOneForUpdateInput
 }
 
 input PersonRelateToOneInput {
@@ -84,7 +84,7 @@ input TodoCreateInput {
   label: String
   isComplete: Boolean
   isPrivate: Boolean
-  assignedTo: PersonRelateToOneInput
+  assignedTo: PersonRelateToOneForCreateInput
 }
 
 input TodosCreateInput {
@@ -198,8 +198,8 @@ input PersonUpdateInput {
   name: String
   email: String
   password: String
-  role: RoleRelateToOneInput
-  tasks: TodoRelateToManyInput
+  role: RoleRelateToOneForUpdateInput
+  tasks: TodoRelateToManyForUpdateInput
 }
 
 input RoleRelateToOneInput {
@@ -225,8 +225,8 @@ input PersonCreateInput {
   name: String
   email: String
   password: String
-  role: RoleRelateToOneInput
-  tasks: TodoRelateToManyInput
+  role: RoleRelateToOneForCreateInput
+  tasks: TodoRelateToManyForCreateInput
 }
 
 input PeopleCreateInput {
@@ -357,7 +357,7 @@ input RoleUpdateInput {
   canEditOtherPeople: Boolean
   canManagePeople: Boolean
   canManageRoles: Boolean
-  assignedTo: PersonRelateToManyInput
+  assignedTo: PersonRelateToManyForUpdateInput
 }
 
 input PersonRelateToManyInput {
@@ -380,7 +380,7 @@ input RoleCreateInput {
   canEditOtherPeople: Boolean
   canManagePeople: Boolean
   canManageRoles: Boolean
-  assignedTo: PersonRelateToManyInput
+  assignedTo: PersonRelateToManyForCreateInput
 }
 
 input RolesCreateInput {
