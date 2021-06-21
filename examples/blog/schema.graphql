@@ -89,7 +89,7 @@ input PostUpdateInput {
   status: PostStatusType
   content: String
   publishDate: String
-  author: AuthorRelateToOneForUpdateInput
+  author: AuthorRelateToOneInput
 }
 
 input AuthorRelateToOneInput {
@@ -109,7 +109,7 @@ input PostCreateInput {
   status: PostStatusType
   content: String
   publishDate: String
-  author: AuthorRelateToOneForCreateInput
+  author: AuthorRelateToOneInput
 }
 
 input PostsCreateInput {
@@ -214,7 +214,7 @@ input AuthorOrderByInput {
 input AuthorUpdateInput {
   name: String
   email: String
-  posts: PostRelateToManyForUpdateInput
+  posts: PostRelateToManyInput
 }
 
 input PostRelateToManyInput {
@@ -232,7 +232,7 @@ input AuthorsUpdateInput {
 input AuthorCreateInput {
   name: String
   email: String
-  posts: PostRelateToManyForCreateInput
+  posts: PostRelateToManyInput
 }
 
 input AuthorsCreateInput {

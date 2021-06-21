@@ -85,7 +85,7 @@ input TaskUpdateInput {
   label: String
   priority: TaskPriorityType
   isComplete: Boolean
-  assignedTo: PersonRelateToOneForUpdateInput
+  assignedTo: PersonRelateToOneInput
   finishBy: String
 }
 
@@ -105,7 +105,7 @@ input TaskCreateInput {
   label: String
   priority: TaskPriorityType
   isComplete: Boolean
-  assignedTo: PersonRelateToOneForCreateInput
+  assignedTo: PersonRelateToOneInput
   finishBy: String
 }
 
@@ -218,7 +218,7 @@ input PersonUpdateInput {
   name: String
   email: String
   password: String
-  tasks: TaskRelateToManyForUpdateInput
+  tasks: TaskRelateToManyInput
 }
 
 input TaskRelateToManyInput {
@@ -237,7 +237,7 @@ input PersonCreateInput {
   name: String
   email: String
   password: String
-  tasks: TaskRelateToManyForCreateInput
+  tasks: TaskRelateToManyInput
 }
 
 input PeopleCreateInput {
