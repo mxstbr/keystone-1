@@ -146,7 +146,7 @@ export const initialContent = [
                 text: ' button on the right of the toolbar – these are the ',
               },
               {
-                text: 'Custom Components',
+                text: 'Custom Editor Blocks',
                 bold: true,
               },
               {
@@ -165,7 +165,7 @@ export const initialContent = [
                 bold: true,
               },
               {
-                text: ', but you can build your own by just defining their prop types (like you do your Keystone schema) and providing a React Component to render the preview.',
+                text: ', but you can build your own by defining their data schema (like you do your Keystone schema) and providing a React Component to render the preview.',
               },
             ],
           },
@@ -203,7 +203,7 @@ export const initialContent = [
             type: 'paragraph',
             children: [
               {
-                text: 'They can also have props that are edited with an inline form, for more complex use cases (including conditional fields)',
+                text: 'Custom editor blocks can also have props that are edited with an inline form, for more complex use cases (including conditional fields)',
               },
             ],
           },
@@ -230,7 +230,7 @@ export const initialContent = [
     type: 'paragraph',
     children: [
       {
-        text: 'This is the end of the editable document. Expand the block below to see how the data is stored ↓',
+        text: 'This is the end of the editable document. Expand the blocks below to see how the editor has been configured and how the data is stored ↓',
         bold: true,
       },
     ],
